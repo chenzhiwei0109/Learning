@@ -1,0 +1,14 @@
+{
+  "name": "mokuai",
+  "version": "1.0.0",
+  "description": "陈陈",
+  "main": "导入.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "陈志伟",
+  "license": "ISC"
+}

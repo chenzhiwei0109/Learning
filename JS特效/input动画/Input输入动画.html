@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(-135deg, #ce5050, #4158d0);
+    }
+
+    .wrapper {
+      width: 450px;
+      background: #ffffff;
+      padding: 30px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper .input-data {
+      height: 40px;
+      width: 100%;
+      position: relative;
+    }
+
+    input {
+      height: 100%;
+      width: 100%;
+      border: none;
+      font-size: 17px;
+      border-bottom: 2px solid silver;
+    }
+
+    .wrapper .input-data label {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      color: grey;
+
+      /* 不会成为目标 */
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="input-data">
+      <input type="text">
+      <label>name</label>
+    </div>
+  </div>
+</body>
+
+</html>

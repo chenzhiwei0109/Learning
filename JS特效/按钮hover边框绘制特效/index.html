@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Static Template</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="button-wrapper" id="div1">
+      <svg width="240" height="60">
+        <rect id='rr' class="rectangle" width="240" height="60" />
+      </svg>
+      <div class="btn">
+        按钮
+      </div>
+    </div>
+  </div>
+  <script>
+    div1.onmouseover = function () {
+      .setAttribute('.rectangle-extend')
+    }
+    div1.onmouseout = function(){
+      .removeAttribute('.rectangle-extend')
+      .setAttribute('.rectangle-shrink')
+    }
+  </script>
+</body>
+
+</html>
