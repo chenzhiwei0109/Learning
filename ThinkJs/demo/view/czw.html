@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>{{username}}</h1>11
+  <div id="div1"></div>
+  <script>
+    fetch('/api/user/userlist').then(res => {
+      return res.json()
+    }).then(res => {
+      console.log(res.data)
+      let listDom = document.querySelector('#div1')
+      res.data.forEach(item => {
+        let div = document.createElement('div')
+        div.className = 'item'
+        div.innerHTML = `
+          <h1>${item.username}</h1>
+
+        `
+        listDom.appendChild(div)
+      })
+    })
+  </script>
+
+</body>
+
+</html>

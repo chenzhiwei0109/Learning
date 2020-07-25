@@ -1,0 +1,76 @@
+<!-- <script>
+  // 控制多个promise的并发量 
+  //  promise.all会执行所有的。
+  //  我们想控制同一时刻同时只执行两个promise,有一个空下来再执行第三个
+
+  class Scheduler {
+    add(promiseCreator) {
+
+    }
+  }
+
+  // 
+  const timeout = time => new Promise(resolve => setTimeout(resolve, time))
+
+  const scheduler = new Scheduler()
+
+  const addTask = (time, order) => {
+    // 这里add里传入一个函数防止直接执行
+    scheduler.add(() => { timeout(time).then(() => { console.log(order) }) })
+  }
+
+  addTask(1000, 1)
+  addTask(500, 2)
+  addTask(300, 3)
+
+</script> -->
+
+
+<script>
+
+  class Scheduler {
+    list = [] //实例属性;可以不在constructor的this里
+    maxNum = 2
+    workingNum = 0
+
+    // 添加
+    add(promiseCreator) {
+      this.list.push(promiseCreator)
+    }
+    // 启动
+    start() {
+      for (let index = 0; index < this.maxNum; index++) {
+        this.doNext()
+      }
+    }
+
+    // 请求动画帧调用的方法。
+    doNext() {
+      // 正在执行的小于最大执行的
+      if (this.list.length && this.workingNum < this.maxNum) {
+        this.workingNum++;
+        this.list.shift()().then(() => {
+          this.workingNum--;
+          this.doNext()
+        })
+      }
+    }
+  }
+
+  const timeout = time => new Promise(resolve => setTimeout(resolve, time))
+
+  const scheduler = new Scheduler()
+
+  const addTask = (time, order) => {
+    scheduler.add(() => timeout(time).then(() => console.log(order)))
+  }
+
+  addTask(1000, 1)    //[(1000,1),(500,2)] 打印2 下一个进入，此时已经500ms 再过300ms
+  addTask(500, 2)
+
+  addTask(300, 3)
+  addTask(400, 4)
+
+
+  scheduler.start()
+</script>

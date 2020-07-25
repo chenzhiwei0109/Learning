@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 class="bg">hello 老陈</h1>
+    <img src="./img/laochen.jpg" alt="">
+
+    <script>
+        fetch('/api/userlist').then((res)=>{
+            return res.json()
+        }).then((res)=>{
+            console.log(res)
+            res.userList.forEach((item,i)=>{
+                let newDiv = document.createElement('div')
+                newDiv.innerHTML = item.username+"的性别是"+item.sex
+                document.body.appendChild(newDiv)
+            })
+        })
+    </script>
+</body>
+</html>
