@@ -1,12 +1,6 @@
 <template>
   <div id="app">
-    <watcher>
-      <template #>
-        <div>
-          
-        </div>
-      </template>
-    </watcher>
+    <watcher></watcher>
   </div>
 </template>
 
