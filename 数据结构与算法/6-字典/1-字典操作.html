@@ -1,0 +1,15 @@
+<script>
+  const m = new Map()
+
+  //增
+  m.set('a','aa');//{ a:'aa'}
+  // 改,无法重复命名。
+  m.set('a','bb');//{ a:'bb'}
+
+  // 删
+  m.delete('b')
+  m.clear();
+
+  // 查
+  m.get('a') //'aa'
+</script>

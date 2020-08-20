@@ -1,0 +1,35 @@
+<script>
+  function F() {
+    console.log(1)
+  }
+
+
+  function debounce(fn, delay = 0) {
+    let timer = null;
+    return function () {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      new Promise((resolve) => {
+        resolve();
+        timer = setTimeout(() => {
+          fn.apply(this);
+        }, delay);
+      }).then(() => {
+        timer = null;
+      });
+    };
+  }
+
+  function A() {
+    G() //
+    G()
+    G()
+  }
+
+  A()
+
+
+  setTimeout(G, 0)
+  G()
+</script>

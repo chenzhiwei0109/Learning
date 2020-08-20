@@ -1,0 +1,68 @@
+<!-- 
+    只有1浮动的话 2会上去被1覆盖 给2加clear:both就可以,这样不轮上面的元素左浮右浮都不会上去，
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #a>div{
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        #div1{
+            background: #ff0000;
+        }
+        #div2{
+            background: #00ff00;
+            /* 相对定位 */
+            position: relative;
+
+        }
+        #div3{
+            background: #0000ff;
+        }
+        h1{
+            border:3px solid;
+        }
+        #a1{
+            width: 600px;
+            height: 600px;
+            background: #ff0000;
+        }
+        #a2{
+            width: 400px;
+            height: 400px;
+            background: #0f0;
+        }
+        #a3{
+            width: 600px;
+            height: 600px;
+            background: #ff0000;
+        }
+    </style>
+</head>
+
+<body>
+    <footer id="a">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </footer>
+    <h1>上面的元素的子元素浮动后，这个元素会上移</h1>
+    <div id="a1">
+        <div id="a2">
+            <div id="a3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+<script>
+  function bfs(root){
+    let queue = [root];
+    while(queue.length){
+      let r = queue.unshift()
+      if(r.val===value){
+        console.log(r)
+      }
+      r.children.forEach(child=>{
+        queue.push(child)
+      })
+    }
+  }
+</script>

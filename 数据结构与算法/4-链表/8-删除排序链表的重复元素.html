@@ -1,0 +1,19 @@
+输入: 1->1->2->3->3
+输出: 1->2->3
+
+<script>
+
+var deleteDuplicates = function (head) {
+  let point = head;
+  while(point&&point.next){
+    if(point.val ===point.next.val){
+      point.val = point.next.val;
+      point.next = point.next.next
+    }else{
+      point = point.next
+    }
+
+  }
+  return head;
+}
+</script>

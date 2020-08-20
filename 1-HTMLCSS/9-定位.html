@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+css定位
+1.position static 默认定位
+2.position relative 相对定位 相对初始位置 不脱离文档流
+3.position absolute 绝对定位 相对祖先元素 直到相对body
+4.position fixed 固定定位  脱离文档流 相对浏览器视口定位 不兼容ie678
+5.position sticky 粘性定位 top:0 在滚动时在top=0的地方固定住不动。
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        #div1 {
+            /* display: block; */
+            height: 30px;
+            background: #ff7200;
+            margin-top: 100px;
+            position: sticky;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="div1">
+
+    </span>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+<script>
+  function passgame(nameList,num){
+    let copy = [...nameList]
+    while(nameList.length>1){
+      // 开始数数字，不是num的时重新添加到末尾，是num的删除
+      for(var i =0;i<num-1;i++){
+        nameList.push(nameList.shift())
+      }
+      nameList.shift()
+    }    
+    return copy.indexOf(nameList.shift())
+  }
+</script>

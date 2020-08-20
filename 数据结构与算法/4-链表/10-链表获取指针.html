@@ -1,0 +1,12 @@
+<script>
+  const json = {
+    a: { b: { c: 1 } },
+    d: { e: 2 }
+  }
+  const str = 'a.b.c';
+
+  str.split('.').reduce((data, key) => {
+    return data[key]
+  }, this.vm.$data)
+
+</script>

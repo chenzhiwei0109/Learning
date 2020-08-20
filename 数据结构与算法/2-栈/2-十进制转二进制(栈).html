@@ -1,0 +1,15 @@
+<script>
+  function dec2bin(num){
+    var stack = []
+    while(num){
+      stack.push(num%2);
+      num = Math.floor(num/2);
+    }
+    var str = ''
+    while(stack.length){
+      str+=stack.pop()
+    }
+    return str*1
+  }
+  console.log(dec2bin(2))
+</script>

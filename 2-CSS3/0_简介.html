@@ -1,0 +1,47 @@
+<!-- 
+    caniuse.com 查看语法兼容性
+    
+    css3是css2的升级版本
+    chrome 
+    safari
+    firefox
+    opera
+
+    兼容浏览器需要前面加属性
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            /* 谷歌 火狐 欧朋 微软 标准 */
+            -webkit-transform: rotate(30deg);
+            -moz-transform: rotate(30deg);
+            -o-transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            transform: rotate(30deg);  
+
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>aa</div>
+
+</body>
+
+</html>

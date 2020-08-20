@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "mallServer",
+    "script": "production.js",
+    "cwd": "D:\Learning\企业级项目\5-Vue+Element+thinkjs+mysql商城后台管理项目\mallServer",
+    "exec_mode": "fork",
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}

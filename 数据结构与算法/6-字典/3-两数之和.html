@@ -1,0 +1,13 @@
+<script>
+  var twoSum = function (nums, target) {
+    var map = new Map()
+    for (var i = 0; i < nums.length; i++) {
+      const n = nums[i];
+      const n2 = target-n;
+      if(map.has(n2)){
+        return [map.get(n2),i]
+      }
+      map.set(n,i)
+    }
+  }
+</script>

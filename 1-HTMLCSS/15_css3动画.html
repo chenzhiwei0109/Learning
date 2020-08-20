@@ -1,0 +1,36 @@
+<!-- 查找兼容性问题 caniuse.com
+-o-transform:
+-webkit-transform:
+-ms-transform:
+-moz-transform:
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            margin: 100px auto;
+            /* 过度*/
+        }
+        div:hover{
+            -o-transform: rotate(30deg);
+            -moz-transform: rotate(30deg);
+            -ms-transform: rotate(30deg);
+            -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+            transition: transform 1s linear;
+
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

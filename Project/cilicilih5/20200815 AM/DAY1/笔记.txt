@@ -1,0 +1,33 @@
+开篇面试题：
+1. 什么叫做标签语意话？
+合理的标签做合适的事情（每一个标签都有自己的语意）
+2. 都有哪些标签？
+块级标签  div p h1~h6 ul/li ol/li dl/dt/dd 或者 header footer main section aside figure nav ...
+行内标签  a span em i strong small ...
+行内块级标签 img input ...
+3. 三大类标签的区别以及相互转换？
+display:block/inline-block/inline
+4. display除了这些值还有哪些？
+none flex table grid ...
+5. none控制隐藏，其他让一个元素消失在视线中的方式都有哪些？
+visibility:hidden
+opacity:0
+定位后调整z-index
+足够打的负margin或者负top值
+...
+6. visibility:hidden 和 display:none 区别？
+   opacity设置透明度，IE中如何的设置？ =>filter在项目中除了设置透明度还可以干啥？
+   你什么需求下用到了-margin?  =>双飞翼布局的多种实现方案
+   flex你在什么时候应用？=>和inline-block及float对比的区别？
+   ...
+7. 为啥进行标签语意化？
+  + 性能的提高
+  + 有助于SEO搜索引擎的优化（前提：内容不是基于客户端渲染的）
+  + 有助于开发和维护
+  + ...
+==============“刨根问底”：知其然而知其所以然
+
+less是css预编译语言（浏览器不能直接的识别，需要把代码编译后，再去给浏览器执行）
+  + 开发环境：我们可以基于less.min.js实时编译
+  + 生产环境：我们可以基于node中的less模块实现批量编译（把less编译为css，最后导入到页面中）
+现在开发都是基于webpack的工程化部署，基于less/less-loader即可实现开发/生产环境下的编译

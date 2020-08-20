@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            width: 100px;
+            height: 40px;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 5px;
+            background: #ff0000;
+        }
+        #a>li:hover {
+            background: #cccccc;
+        }
+
+        li a{
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .b{
+            display: none;
+        }
+        #a>li:hover .b{
+            display: block;
+            opacity: 1;
+        }
+        .b li:hover{
+            background: #cccccc;
+
+        }
+    </style>
+</head>
+<body>
+    <ul id="a">
+        <li>
+            <a href="">菜单1</a>
+            <ul class="b">
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+            </ul>
+        </li>
+        <li><a href="">菜单2</a></li>
+        <li><a href="">菜单3</a></li>
+        <li><a href="">菜单4</a></li>
+    </ul>
+</body>
+</html>

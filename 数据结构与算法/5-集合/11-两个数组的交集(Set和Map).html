@@ -1,0 +1,25 @@
+<script>
+  var intersection = function (nums1, nums2) {
+    return [...new Set(nums1)].filter(i => nums2.includes(i))
+  };
+
+</script>
+
+<script>
+  var intersection = function (nums1, nums2) {
+    const map = new Map()
+    const arr = []
+    nums1.forEach(n => {
+      map.set(n, true);
+    })
+    nums2.forEach(item=>{
+      if(map.get(item)){
+        arr.push(item)
+        map.delete(item)
+      }
+    })
+
+    return arr
+  }
+
+</script>

@@ -1,0 +1,40 @@
+<!-- 
+权重值相同时 后定义的会覆盖先定义的
+权重值不同时的后代选择器 权重值可以叠加来看
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="aa">第一个</div>
+    <div>陈志伟</div>
+    <h1 class="aa">第二个</h1>
+</body>
+</html>
+<!-- 
+一条样式规则的整体权重值包含四个独立的部分：[A, B, C, D];
+
+A表示内联样式，只有1或者0两个值；
+
+B表示规则中ID的数量；
+
+C表示规则中除了ID、标签和伪元素以外的其它选择器数量；
+
+D表示规则中标签和伪元素的数量；
+
+比较时从高位到低位（从A到D）分别比较，高位相同才需要比较低位；
+
+有 !important 标记的属性权重值无视没用 !important 指定的一切情况；
+
+多次指定 !important 时，相互抵销。
+ -->

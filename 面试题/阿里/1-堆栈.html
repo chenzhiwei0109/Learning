@@ -1,0 +1,29 @@
+<script>
+  // let a = {
+  //   n: 1
+  // }
+  // let b = a;
+  // a.x = a = { // a = {n:2} a.x = a
+  //   n: 2
+  // }
+  // console.log(a.x) //undefined
+  // console.log(b) // {n:1,x:{n:2}}
+
+  // var a = 'abc' + 123 + 456
+  // var b = '456' - '123'
+  // var c = 100 + true + 21.2 + null + undefined + 'Tencent' + [] + null + 9 + false
+  // console.log(a, b, c);
+
+  var str = 'abc123'
+  var num = parseInt(str)
+  if (num == NaN) {
+    alert(NaN)
+  } else if (num == 123) {
+    alert(123)
+  } else if (typeof num == 'number') {
+    alert('number')
+  } else {
+    alert(str)
+  }
+
+</script>

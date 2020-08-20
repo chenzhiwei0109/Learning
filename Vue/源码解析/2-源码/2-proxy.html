@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div id="app"></div>
+<script>
+  let data={
+    msg:'消息',
+    count:1
+  }
+  let vm = new Proxy(data,{
+    get(target,key){
+      return target[key]
+    },
+    set(target,key,newValue){
+      if(target[key]===newValue){
+        return
+      }else{
+        target[key] = newValue
+        document.querySelector('#app').textContent =target[key]
+      }
+    }
+  })
+
+  vm.msg ='aa'
+</script>
+</body>
+</html>

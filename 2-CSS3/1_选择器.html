@@ -1,0 +1,93 @@
+<!-- 
+    元素选择符
+    * E E#id E.class 
+    关系选择符
+    E F E>F E+F E~F 
+    属性选择符
+    E[att] E[att="val"] E[att~="val"] E[att^="val"] E[att$="val"] E[att*="val"] E[att|="val"] 
+    伪类选择符
+    E:link E:visited E:hover E:active E:focus E:not(s)
+
+ -->
+<!-- 
+    *  ul  #id .class
+ -->
+<!-- 
+     E F 包含  E>F 亲子代  E+F相邻兄弟  E~F E后面所有兄弟F
+  -->
+<!-- 
+    li[class]                       有class的li
+    li[class~="a"]               空格分隔 其中一个等于a       class="a b c"
+    li[class^="a"]              以a开头的属性                class="aerc"
+    li[class$="a"]               以a结尾                     class="d sca"
+    li[class|="a"]               以a开头或只有a且以"-"结尾    a-test  或者a
+    li[class*="a"]                 包含a                       class = "cbac"
+ -->
+<!-- 
+伪类选择器
+a:link-visited-hover-active 访问前-已被访问-鼠标悬停-鼠标按下
+a:focus 
+
+li:first-child{}      父元素的第一个是li的li
+c3 a:last-child{}     
+c3 a:only-child{}         要使该属性生效，E元素必须是某个元素的子元素，E的父元素最高是body，即E可以是body的子元素 选中父元素只有一个a的a
+
+从1开始
+li:nth-child(2n-1){}   选中第2n-1个li
+li:nth-last-child(){
+
+li:first-of-type  选中第一个类型的
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div[class="a"] {
+            width: 200px;
+            height: 222px;
+            background: #ffff00;
+        }
+
+        /* --换行------------------------------------------------------------------------------- */
+        #div1 {
+            width: 100px;
+            border: 1px solid;
+        }
+
+        /* 第一行的背景 */
+        #div1::first-line {
+            background: #00ff00;
+        }
+
+        /* not里是个选择器 */
+        ul li:not(.two) {
+            background: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a"></div>
+    <input type="text">
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+    <img src="img/4.jpg" alt="">
+    <div id="div1">dsada sd asdad saaaaa aa aada sd</div>
+    <ul>
+        <li>001</li>
+        <li class="two">002</li>
+        <li>003</li>
+        <li>004</li>
+        <li>005</li>
+    </ul>
+
+</body>
+
+</html>

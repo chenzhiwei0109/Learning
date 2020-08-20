@@ -1,0 +1,16 @@
+<script>
+  function climbStairs(n) {
+    if (n < 2) { return 1 };
+    let dp0 = 1;
+    let dp1 = 1;
+    let result;
+    for (var i = 2; i <=n; i++) {
+      result = dp0 + dp1;
+      dp0 = dp1;
+      dp1 = result;
+    }
+    return result
+  }
+  console.log(climbStairs(2))
+  console.log(climbStairs(4))
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1::first-letter{
+            background: #ff0000;
+        }
+        #div2{
+            width: 100px;
+            border: 1px solid #bbb;
+            margin: 5px;
+        }
+        #div2::first-line{
+            background: #ff0000;
+        }
+        #div3::selection{
+            background: #f0f;
+            color: #0f0;
+        }
+        input::placeholder{
+            color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">第一个字母</div>
+    <div id="div2">第一行会被改变</div>
+    <div id="div3">选中的background-color，color及text-shadow改变状态</div>
+    <input type="text" placeholder="请输入关键字">
+</body>
+</html>

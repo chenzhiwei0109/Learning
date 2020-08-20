@@ -1,0 +1,66 @@
+<!-- 
+inline-block后回车会产生空格
+块级元素block:自己占一行显示 可以设置宽高 h1~h6 li ol ul table p div
+行级元素inline:行级元素和行级元素会在一行显示 不能设置宽高 宽高是内容撑开的  a span
+行块级元素：img input   
+
+
+行级 -> 块级 : display:block;
+块级 -> 行级 : display:inline;
+
+display:inline-block; 不支持IE6
+父元素宽度不够就掉下去
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            display: inline-block;
+        }
+
+        img {
+            height:300px;
+        }
+        /* 取消文本框放大缩小 */
+        textarea{
+            resize: none;
+        }
+        #username{
+            /* 去掉搜索框蓝边 */
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <img src="pic.jpg" alt="">
+    <img src="pic.jpg" alt="">
+    <!-- user/regist点击submit后转到的网站 -->
+    <form action="user/regist">
+            <label for="username">用户名：</label>
+            <input type="text" id="username"><br>
+        <label>密码: <input type="password"></label>
+        <input type="radio">
+        <select name="" id="">
+            <option value="">oppo</option>
+            <option value="">vivo</option>
+            <option value="">huawei</option>
+        </select>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+</body>
+
+</html>

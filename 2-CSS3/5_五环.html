@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .circle,.circle::after{
+            width: 200px;
+            height: 200px;
+            border: 10px solid;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .circle::after{
+            content: '';
+            top: -10px;
+            left: -10px;
+        }
+        .blue{
+            border-color: blue;
+
+        }
+        .blue::after{
+            border-color: blue;
+            border-bottom-color: transparent;
+            z-index: 1;
+
+        }
+        .black{
+            border-color: black;
+            left: 230px;
+        }
+        .black::after{
+            border-color: black;
+            z-index: 1;
+            border-left-color: transparent;
+        }
+        .red{
+            border-color: red;
+            left: 460px
+        }
+        .red::after{
+            border-color: red;
+            z-index: 4;
+            border-left-color: transparent
+        }
+        .yellow{
+            border-color: yellow;
+            left: 115px;
+            top: 100px;
+        }
+        .yellow::after{
+            border-color: yellow;
+        }
+        .green{
+            border-color: green;
+            left: 350px;
+            top: 100px;
+        }
+        .green::after{
+            content: '';
+            border-color: green;
+            z-index: 2;
+            border-top-color: transparent;
+            border-right-color: transparent
+        }
+    </style>
+</head>
+<body>
+    <div class="circle blue"></div>
+    <div class="circle black"></div>
+    <div class="circle red"></div>
+    <div class="circle yellow"></div>
+    <div class="circle green"></div>
+    <p></p>
+</body>
+</html>

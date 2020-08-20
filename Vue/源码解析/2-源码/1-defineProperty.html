@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <input type="text" id='ipt' value="">
+  <script>
+
+    let data = {
+      msg: '',
+      count: 10
+    }
+    let vm = {}
+    let ipt = document.querySelector('#ipt')
+
+    function ProxyData() {
+      Object.keys(data).forEach(key => {
+        Object.defineProperty(vm, key, {
+          enumerable: true,
+          configurable: true,
+          get() {
+            return data[key]
+          },
+          set(newVal) {
+            if (newVal === data[key]) {
+              return
+            }
+            data[key] = newVal;
+            ipt.value = data[key]
+            document.querySelector('#app').textContent = data[key]
+          }
+
+        })
+      })
+    }
+    ProxyData()
+    ipt.oninput = function () {
+      vm.msg = ipt.value
+    }
+    vm.msg = 'hello world'
+  </script>
+</body>
+
+</html>

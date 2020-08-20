@@ -1,0 +1,40 @@
+输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
+输出：7 -> 0 -> 8
+原因：342 + 465 = 807
+
+1.新建空链表
+2.遍历被相加的两个链表，个位数追加，十位数留在下一位相加
+<script>
+  /**
+   * Definition for singly-linked list.
+   * function ListNode(val) {
+   *     this.val = val;
+   *     this.next = null;
+   * }
+   */
+  /**
+   * @param {ListNode} l1
+   * @param {ListNode} l2
+   * @return {ListNode}
+   */
+
+  var addTwoNumbers = function (l1, l2) {
+    let l3 = new ListNode(0);
+    let p3 = l3;
+    let carry = 0;
+    while (l1 || l2) {
+      const val1 = l1 ? l1.val : 0
+      const val2 = l2 ? l2.val : 0
+      const val = val1+val2 +carry;
+      carry = Math.floor(val/10);//取十位数
+      p3.next = new ListNode(val%10);//取个位数
+      if(l1) l1 = l1.next;
+      if(l2) l2 = l2.next;
+      p3 = p3.next
+    }
+    if(carry){
+      p3.next = carry
+    }
+    return l3.next;
+  }
+</script>

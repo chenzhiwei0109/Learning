@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            float: right;
+        }
+
+        #div1 {
+            width: 200px;
+            position: absolute;
+            background: #cccccc;
+            top: 0;
+            left: -200px;
+            bottom: 0;
+            transition: all 2s ease;
+
+        }
+
+        #div1:target {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#div1">菜单</a>
+    <div id="div1"></div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .list{
+            width: 200px;
+            height: 270px;
+            border:  solid #eee;
+            border-width: 10px;
+            float: left;
+            position: relative;
+        }
+        .list:last-child{
+            margin-left: -10px;
+        }
+        img{
+            width: 170px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .list div{
+            text-align: center;
+            margin-top: 210px;
+        }
+        p{
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        <img src="phone.webp" alt="">
+        <div>魅族(MEIZU)&nbsp;魅蓝E...</div>
+        <p>¥1799.00</p>    
+    </div>
+    <div class="list">
+        <img src="phone.webp" alt="">
+        <div>苹果(Apple)&nbsp;苹果8...</div>
+        <p>¥4754.00</p>
+    </div>
+</body>
+
+</html>

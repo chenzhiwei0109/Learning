@@ -1,0 +1,25 @@
+abcabcbb
+无重复字符的最长子串是 "abc"，所以其长度为 3。
+
+
+输入'abcabcbb'
+第一步:左指针指向a,右指针向后移动，当遇到重复字符a时，左右指针的窗口长度是slice(左，右);
+
+<script>
+  var lengthOfLongestSubstring = function (s) {
+    var left = 0;
+    var res = 0
+    const map = new Map()
+    for (let i = 0; i < s.length; i++) {
+      let r = s[i]
+      if (map.has(r) && map.get(r) > left) {
+        left = map.get(r) + 1;
+      }
+      res = Math.max(res, i - left + 1)
+      map.set(r, i)
+    }
+    return res;
+
+  }
+
+</script>

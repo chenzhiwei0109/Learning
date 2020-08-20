@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/",
+    "component": "D:\\\\Learning\\\\Vue\\\\源码解析\\\\3-SSR\\\\pages\\\\layout",
+    "children": [
+      {
+        "path": "",
+        "name": "home",
+        "component": "D:\\\\Learning\\\\Vue\\\\源码解析\\\\3-SSR\\\\pages\\\\home",
+        "_name": "_78401705"
+      },
+      {
+        "path": "login",
+        "name": "login",
+        "component": "D:\\\\Learning\\\\Vue\\\\源码解析\\\\3-SSR\\\\pages\\\\loginregister",
+        "_name": "_6f1ae4b4"
+      },
+      {
+        "path": "register",
+        "name": "register",
+        "component": "D:\\\\Learning\\\\Vue\\\\源码解析\\\\3-SSR\\\\pages\\\\loginregister",
+        "_name": "_6f1ae4b4"
+      },
+      {
+        "path": "profile/:username",
+        "name": "profile",
+        "component": "D:\\\\Learning\\\\Vue\\\\源码解析\\\\3-SSR\\\\pages\\\\profile",
+        "_name": "_56a56dc3"
+      },
+      {
+        "path": "settings",
+        "name": "settings",
+        "component": "D:\\\\Learning\\\\Vue\\\\源码解析\\\\3-SSR\\\\pages\\\\settings",
+        "_name": "_0f485b49"
+      },
+      {
+        "path": "editor",
+        "name": "editor",
+        "component": "D:\\\\Learning\\\\Vue\\\\源码解析\\\\3-SSR\\\\pages\\\\editor",
+        "_name": "_62db5213"
+      },
+      {
+        "path": "article/:slug",
+        "name": "article",
+        "component": "D:\\\\Learning\\\\Vue\\\\源码解析\\\\3-SSR\\\\pages\\\\article",
+        "_name": "_3d6fb110"
+      }
+    ],
+    "_name": "_6eaa2bd0"
+  }
+]

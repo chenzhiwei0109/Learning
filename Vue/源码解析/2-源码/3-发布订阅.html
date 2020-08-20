@@ -1,0 +1,29 @@
+<script>
+class EventEmitter {
+  constructor() {
+    this.subs = Object.create(null)
+  }
+  $on(eventName, handle) {
+    // 如果有这个属性就使用，如果没有就创建
+    this.subs[eventName] = this.subs[eventName] || []
+    this.subs[eventName].push(handle)
+
+  }
+  $emit(eventName) {
+    if (this.subs[eventName]) {
+      this.subs[eventName].forEach(fn => {
+        fn()
+      })
+    }
+  }
+}
+let em = new EventEmitter()
+em.$on('click', () => {
+  console.log('click1')
+})
+em.$on('click', () => {
+  console.log('click2')
+})
+
+em.$emit('click')
+</script>

@@ -1,0 +1,17 @@
+<script>
+class C{
+  constructor(){
+    this.fn()
+  }
+
+  fn(){
+    let f = this.cb
+    f.call(this)
+  }
+
+  cb(){
+    console.log(this)
+  }
+}
+new C()
+</script>

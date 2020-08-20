@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <div id="div1">{{msg}}---{{info.name}}</div>
+    <ul>
+      <li></li>
+      <li>1</li>
+    </ul>
+    <div v-text='count'></div>
+    <input type="text" v-model='msg'>
+    <input type="text" v-model='info.name'>
+  </div>
+
+  <script src='./js/Dep.js'></script>
+  <script src="./js/watcher.js"></script>
+  <script src="./js/compiler.js"></script>
+  <script src="./js/observer.js"></script>
+  <script src="./js/vue.js"></script>
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '123',
+        count: 456,
+        info: {
+          name: 'czw'
+        }
+      }
+
+    })
+
+  </script>
+</body>
+
+</html>

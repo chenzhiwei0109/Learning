@@ -1,0 +1,35 @@
+<script>
+  const a = { val: 'a' };
+  const b = { val: 'b' };
+  const c = { val: 'c' }
+  const d = { val: 'd' }
+  a.next = b;
+  b.next = c;
+  c.next = d;
+
+  // 遍历链表
+  let p = a;
+  while (p) {
+    // console.log(p)
+    p = p.next;
+  }
+
+  // 中间插入
+
+  let e = {
+    val: 'e'
+  }
+  b.next = e;
+  e.next = c
+
+  p = a;
+  while (p) {
+    // console.log(p)
+    p = p.next;
+  }
+
+
+  // 删除
+  b.next = c
+  console.log(a)
+</script>

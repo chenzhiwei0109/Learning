@@ -1,0 +1,8 @@
+<script>
+  function G() { }
+  function F() {
+    return new G()
+  }
+  a = new F()
+  console.log(a instanceof G)
+</script>

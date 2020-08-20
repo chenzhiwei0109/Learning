@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- 内部样式 -->
+    <style>
+        #div1 {
+            background: blue;
+        }
+
+        #ul1 .menu{
+            background: yellow;
+        }
+        #ul1>.menu{
+            background: red;
+        }
+
+    </style>
+    <!-- 外部样式 -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <!-- 内联样式 -->
+    <div style="background: red;">css层叠样式表</div>
+
+    <div id="div1" class="1">aa</div>
+    
+    <ul id="ul1">
+        <li>1
+            <ul>
+                <li class="menu">2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </li>
+        <li>2</li>
+        <li class="menu">3</li>
+        <li>4</li>
+    </ul>
+
+    
+</body>
+
+</html>
+
+<!-- 
+项目不要用中文起名字
+css选择器:
+标签/元素选择器 div{} span{} h1{} ....
+id选择器 #id{}
+类选择器 .class{}
+-->
+<!-- 
+ 选择器权重值：   亲子代>后代 
+-->

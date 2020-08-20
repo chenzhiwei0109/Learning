@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            transition: all 1s linear 1s;
+            /* 
+            transition-property: all; 设置参与过度属性
+            transition-duration: 1s; 过度持续时间
+            transition-timing-function: linear; 过度类型
+            transition-delay: 1s 延迟过度时间
+            */
+        }
+        div:hover{
+            background: #00ff00;
+            transform: translate(100px,100px)
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>
