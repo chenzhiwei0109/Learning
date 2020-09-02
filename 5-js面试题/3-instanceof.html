@@ -1,0 +1,16 @@
+<script>
+  function _instanceof(obj, fn) {
+    let head = obj;
+    while (head) {
+      if (head === fn.prototype) {
+        return true
+      }
+      head = head.__proto__
+    }
+    return false
+  }
+  let arr = []
+  console.log(_instanceof(arr, Array))
+  console.log(_instanceof(arr, Object))
+  console.log(_instanceof(arr, Math))
+</script>

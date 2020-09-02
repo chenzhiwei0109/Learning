@@ -1,0 +1,32 @@
+<script>
+
+  // 此题把return {fun} 改为 return {obj} 就好做很多了  
+  function fun(n, o) {
+    console.log(o)
+    return {
+      fun: function (m) {
+        return fun(m, n) //调用自己
+      }
+    }
+  }
+
+
+  var a = fun(0)   //输出  undefined//返回 return {fun:function(m){return fun(m,0)}}
+  a.fun(1) // 0
+  a.fun(2) // 0
+  a.fun(3) // 0
+
+  var b = fun().fun(1).fun(2).fun(3)
+  // fun()=> 输出undefined  ,返回{fun:functon(m){return fun(m,undefined)}}
+  //  fun(1,undefined); //输出undefined 返回 {fun:functon(m){return fun(m,1)}}
+  //fun (2) //输出 1 返回  {fun:functon(m){return fun(m,2)}}
+  //fun (3) //输出 2 返回  {fun:functon(m){return fun(m,2)}}
+
+  var c = fun(0).fun(1)
+  // fun(0)=> 输出undefined  ,返回{fun:functon(m){return fun(m,0)}}
+  // fun(1)=> fun(1,0) ,输出0 ,返回{fun:functon(m){return fun(m,1)}}
+  c.fun(2)  // fun(2) => fun(2,1) //返回1 
+  c.fun(3)  // fun(3) => fun(3,1)// 返回1
+
+
+</script>

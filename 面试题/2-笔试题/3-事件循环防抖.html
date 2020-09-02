@@ -1,0 +1,29 @@
+<script>
+
+  function debounce(fn) {
+    let isExecuted = false;
+    return function (...rest) {
+      let self = this;
+      if (!isExecuted) {//如果没有执行
+        isExecuted = true;
+        let res;
+        new Promise((resolve, reject) => {
+          res = fn.apply(self, rest)
+          resolve()
+        }).then(() => { isExecuted = false })
+        return res;
+      }
+    }
+  }
+
+  function F(x,y) {
+    console.log(x,y)
+  }
+  G = debounce(F);
+  function A() {
+    G(1,2);
+    G(1,2);
+    G(1,2);
+  }
+  A() //只打印一次
+</script>

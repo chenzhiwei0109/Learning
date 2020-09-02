@@ -1,3 +1,11 @@
 <script>
-  let arr = ['A1','A2','A']
+  var name = 'global';
+var obj = {
+    name: 'local',
+    foo: function(){
+      console.log(this)
+    }
+};
+var bar =  obj.foo;
+bar()
 </script>

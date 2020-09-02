@@ -1,0 +1,11 @@
+<script>
+  // let obj = Object.create(Object.prototype)
+  // 创建一个新对象，使用现有对象作为新对象的原型。
+  function _create(proto) {
+    function fn() {};
+    fn.prototype =proto;
+    return new fn()
+  }
+  let obj = _create(Object.prototype);
+  console.log(obj.constructor ===Object)
+</script>

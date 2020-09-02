@@ -1,0 +1,13 @@
+<script>
+  function _new(fn, ...rest) {
+    let obj = Object.create(fn.prototype);
+    let res = fn.call(obj, ...rest);
+    return typeof res === "object" ? res : obj
+  }
+  function fn(name) {
+    this.name = name
+    return {}
+  }
+  let obj = _new(fn, 'zs')
+  console.log(obj)
+</script>

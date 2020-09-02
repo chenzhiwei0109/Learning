@@ -1,0 +1,17 @@
+<script>
+  
+  Array.prototype._reduce = function (cb, init) {
+    // 累加器初始化，如果有就使用，如果没有就把第一项作为累加器起始
+    let accumu = init ? init : this[0]
+    // 如果累加器初始化有值，就从第一项开始，如果累加器没有
+    for (let index = init ? 0 : 1; index < this.length; index++) {
+      accumu = cb(accumu, this[index], index, this)
+    }
+    return accumu
+  }
+  let arr = [1, 2, 3, 4]
+  let res = arr._reduce((sum, item, index, arr) => {
+    return item + sum
+  })
+  console.log(res)
+</script>

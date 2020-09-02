@@ -1,0 +1,38 @@
+<script>
+
+  Function.prototype._call = function (ctx = globalThis || window, ...rest) {
+    ctx.fn = this;
+    const res = ctx.fn(...rest);
+    delete ctx.fn;
+    return res
+
+  }
+
+  Function.prototype._apply = function (ctx = globalThis || window, rest) {
+    ctx.fn = this;
+    const res = ctx.fn(...rest);
+    delete ctx.fn;
+    return res
+
+  }
+
+  Function.prototype._bind = function (obj, ...outer) {
+    let self = this
+    return function (inner) {
+      let res = outer.concat(inner)
+      self.call(obj, ...res)
+    }
+  }
+
+  let obj = {}
+  function fn(x, y) {
+    this.name = x
+    this.age = y
+  }
+  fn._apply(obj, ['这是'])
+  console.log(obj)
+  fn._call(obj, 'call')
+  console.log(obj)
+  fn._bind(obj, 1)(2)
+  console.log(obj)
+</script>
