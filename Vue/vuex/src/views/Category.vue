@@ -9,7 +9,7 @@
   export default {
     methods: {
       getUser() {
-        this.$store.commit("getUserInfo", { name: "zs", age: "18" });
+        this.$store.commit("user/getUserInfo", { name: "zs", age: "18" });
       },
     },
   };

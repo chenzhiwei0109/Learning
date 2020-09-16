@@ -1,0 +1,13 @@
+<script>
+  let a = 'name'
+  obj = {
+    SET_PLAN_LIST: 'a'
+  }
+  console.log(obj.SET_PLAN_LIST)
+  b = {
+    [obj.SET_PLAN_LIST](a){
+      console.log(a)
+    }
+  }
+  console.log(b)
+</script>

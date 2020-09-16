@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  /* 设置元素内容垂直方式 */
+  /* 只对text有效 */
+  /* sub: 下移*/
+  /* super:上移 */
+  /* baseline:基线 */
+  /* top:顶线 */
+  p{
+    background: #ececec;
+    height: 80px;
+    font-size: 22px;
+  }
+  span{
+    color:red;
+    font-size: 14px;
+  }
+  .sub{
+    vertical-align: sub;
+  }
+  .super{
+    vertical-align: super;
+  }
+  </style>
+</head>
+<body>
+  <p class="p1">css <span class="sub">sub</span></p> 
+  <p class="sub">sub <span>css</span></p> 
+  <p>css <span class="super">super</span></p> 
+</body>
+</html>
